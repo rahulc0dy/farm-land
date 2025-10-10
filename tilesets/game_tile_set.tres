@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://cbju4hu3degdy"]
+[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://cbju4hu3degdy"]
 
 [ext_resource type="Texture2D" uid="uid://cab8v8xp1fg1w" path="res://assets/tilesets/water.png" id="1_tjtrf"]
 [ext_resource type="Texture2D" uid="uid://ojws77gq38jr" path="res://assets/tilesets/grass.png" id="1_tkbyn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bvtc5dy1fe1lt" path="res://scenes/houses/small_house.tscn" id="7_8yb5x"]
 [ext_resource type="PackedScene" uid="uid://b1imsfm4w156" path="res://scenes/objects/trees/small_tree.tscn" id="8_8yb5x"]
 [ext_resource type="PackedScene" uid="uid://4nr705c31ryg" path="res://scenes/objects/trees/large_tree.tscn" id="9_xa2g7"]
+[ext_resource type="PackedScene" uid="uid://dv8scbcmj17ay" path="res://scenes/objects/rocks/rock.tscn" id="10_jutaf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1amf"]
 texture = ExtResource("1_tkbyn")
@@ -451,7 +452,10 @@ texture = ExtResource("3_v1amf")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pudl8"]
 texture = ExtResource("4_7cqdy")
 5:0/0 = 0
+5:0/0/y_sort_origin = 3
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5, 3.5, 2.5, 2, 3, 4, -3.5, 6)
 6:0/0 = 0
+6:0/0/y_sort_origin = 3
 7:0/0 = 0
 8:0/0 = 0
 8:1/0 = 0
@@ -459,8 +463,13 @@ texture = ExtResource("4_7cqdy")
 6:1/0 = 0
 5:1/0 = 0
 5:2/0 = 0
+5:2/0/y_sort_origin = 2
 4:2/0 = 0
+4:2/0/y_sort_origin = 3
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 1.5, 3, 1.5, 3, 5, -3, 5)
 3:2/0 = 0
+3:2/0/y_sort_origin = 3
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, 1.5, 2, 1.5, 2.5, 4.5, -2.5, 4.5)
 2:2/0 = 0
 1:2/0 = 0
 0:2/0 = 0
@@ -476,6 +485,7 @@ texture = ExtResource("4_7cqdy")
 6:2/0 = 0
 8:2/size_in_atlas = Vector2i(1, 2)
 8:2/0 = 0
+8:2/0/y_sort_origin = 8
 8:4/0 = 0
 7:4/0 = 0
 6:4/0 = 0
@@ -484,8 +494,11 @@ texture = ExtResource("4_7cqdy")
 0:0/0 = 0
 1:0/size_in_atlas = Vector2i(2, 2)
 1:0/0 = 0
+1:0/0/y_sort_origin = 8
 3:0/size_in_atlas = Vector2i(2, 2)
 3:0/0 = 0
+3:0/0/y_sort_origin = 8
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 8, 3, 8, 3, 14, -3, 14)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_uk42g"]
 scenes/1/scene = ExtResource("5_pudl8")
@@ -493,8 +506,10 @@ scenes/2/scene = ExtResource("6_yewih")
 scenes/3/scene = ExtResource("7_8yb5x")
 scenes/4/scene = ExtResource("8_8yb5x")
 scenes/5/scene = ExtResource("9_xa2g7")
+scenes/6/scene = ExtResource("10_jutaf")
 
 [resource]
+physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass Terrain"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
