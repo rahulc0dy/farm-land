@@ -14,6 +14,11 @@ config/name="farm-land"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*res://scripts/globals/tool_manager.gd"
+InventoryManager="*res://scripts/globals/inventory_manager.gd"
+
 [display]
 
 window/size/viewport_width=640
@@ -32,6 +37,10 @@ folder_colors={
 "res://scripts/": "pink",
 "res://tilesets/": "blue"
 }
+
+[global_group]
+
+navigation_polygon_source_geometry_group=""
 
 [input]
 
@@ -70,10 +79,12 @@ hit={
 2d_physics/layer_1="Ground"
 2d_navigation/layer_1="Chicken Navigation"
 2d_physics/layer_2="Player"
+2d_navigation/layer_2="Cow Navigation"
 2d_physics/layer_3="Interactible"
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
+2d_physics/layer_7="NPC"
 
 [rendering]
 
